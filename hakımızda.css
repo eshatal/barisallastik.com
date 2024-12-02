@@ -1,0 +1,335 @@
+/* Genel Sıfırlama Stilleri */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+    background: #95a5a6;
+    width: 14px;
+}
+::-webkit-scrollbar-thumb {
+    background: #2c3e50;
+}
+
+/* Body Temel Stilleri */
+.body {
+    flex: 25%;
+}
+
+/* HTML ve Body Boyutlandırma */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Navigasyon Responsive Ayarları */
+nav, nav1 {
+    padding: 10px 30px; /* Varsayılan padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap; /* Küçük ekranlarda sarmalanmayı sağlar */
+}
+nav1 ul{
+    display: flex;
+    gap: 90px;
+    transform: translate(-20%, -0%);
+    font-size: 20px;
+
+    
+}
+
+nav1 ul li{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+nav1 ul li a {
+    text-decoration: none;
+    color: black;
+}
+nav1 ul li a:hover {
+    color: red;
+}
+
+/* Birinci Navigasyon */
+nav {
+    background: #212529;
+    height: auto; /* Dinamik yükseklik */
+    min-height: 45px;
+}
+
+/* İkinci Navigasyon */
+nav1 {
+    background: white;
+    height: auto; /* Dinamik yükseklik */
+    min-height: 80px;
+    color: black;
+    border-style: solid;
+      border-width: 1px;
+      border-color: black;
+}
+
+/* Navigasyon Listesi Temel Stilleri */
+nav ul, nav1 ul {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Varsayılan boşluk */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Liste Elemanları */
+nav ul li, nav1 ul li {
+    position: relative;
+}
+
+/* Link Stilleri */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease; /* Yumuşak renk geçişi */
+}
+
+/* Hover Efektleri */
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+/* Sosyal Medya İkonları */
+.menu-icon i {
+    color: #fff;
+    font-size: 20px;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.menu-icon i:hover {
+    color: gray;
+}
+
+/* Logo ve İsim Stilleri */
+.logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.isimler {
+
+    height: 80px;
+    /*text-align: center;
+    font-size: 35px;
+    color: black;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;*/
+}
+
+/* Responsive Tasarım */
+@media screen and (max-width: 1024px) {
+    nav, nav1 {
+        padding: 10px 15px; /* Daha dar padding */
+    }
+
+    nav ul, nav1 ul {
+        gap: 30px; /* Boşlukları azalt */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Mobil Navigasyon Menüsü */
+    nav, nav1 {
+        flex-direction: column; /* Dikey dizilim */
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul, nav1 ul {
+        flex-direction: column; /* Menü elemanlarını dikey hizala */
+        gap: 15px; /* Dikey boşluk */
+        width: 100%; /* Tam genişlik */
+        text-align: center;
+    }
+
+    .logo, .isimler {
+        margin-bottom: 10px; /* Alt boşluk */
+    }
+
+    .isimler {
+        font-size: 25px; /* Mobilde küçük font */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Çok küçük ekranlar için */
+    nav, nav1 {
+        padding: 5px;
+    }
+
+    nav ul, nav1 ul {
+        gap: 10px; /* Daha az boşluk */
+    }
+
+    .isimler {
+        font-size: 20px; /* Daha da küçük font */
+    }
+
+    .menu-icon i {
+        font-size: 16px; /* İkon boyutunu küçült */
+    }
+}
+
+/* Mobil Menü Açma/Kapama Butonu (Gerekirse eklenebilir) */
+.mobile-menu-toggle {
+    display: none; /* Varsayılan olarak gizli */
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block; /* Mobilde görünür */
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+}
+
+/* Menü Açık/Kapalı Durumları */
+.nav-menu {
+    transition: all 0.3s ease; /* Yumuşak geçiş */
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        max-height: 0; /* Mobilde menüyü gizle */
+        overflow: hidden;
+    }
+
+    .nav-menu.active {
+        max-height: 300px; /* Açıldığında görünür */
+    }
+}
+
+
+
+
+
+.hakımızda-left img{
+width: 420px;
+height: auto;
+transform: translate(50px);
+}
+
+#hakımızda{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 12%;
+}
+
+.hakımızda-right {
+    width: 54%;
+}
+
+.hakımızda-right ul li{
+    display: flex;
+    align-items: center;
+}
+
+.hakımızda-right h4{
+    color: #e74d06;
+    font-size: 37px;
+    margin-bottom: 5px;
+
+}
+
+.hakımızda-right p{
+    color: #444;
+    line-height: 26px;
+    font-size: 15px;
+}
+
+.hakımızda-right .adres{
+    margin: 25px 0;
+}
+
+.hakımızda-right .adres ul li{
+margin-bottom: 5px;
+}
+
+.adres .adress-logo{
+    margin-right: 15px;
+    color: #e74d06;
+}
+
+.adres .seprater{
+    margin: 0 25px;
+}
+
+
+.containera {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+
+   
+  }
+
+  .sectiona {
+    flex: 1;
+    margin: 0 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .sectiona h2 {
+    color: #ff0000;
+    margin-bottom: 20px;
+  }
+
+  .brand-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .brand-list li {
+    margin-bottom: 5px;
+  }
+
+  .social-media {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  .social-media a:hover {
+    color: #ccc;
+  }
+
+  .info {
+    text-align: center;
+    margin-top: 20px;
+  }
